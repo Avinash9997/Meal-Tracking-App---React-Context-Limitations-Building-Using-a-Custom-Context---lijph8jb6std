@@ -14,8 +14,6 @@ const App = () => {
   );
 };
 
-export default App;
-
 const Counter = () => {
   const { meals } = useContext(MealsContext);
   const remainingMeals = meals.filter((meal) => !meal.ticked);
@@ -26,8 +24,6 @@ const Counter = () => {
     </div>
   );
 };
-
-export default Counter;
 
 const MealsList = () => {
   const { meals, tickMeal } = useContext(MealsContext);
@@ -50,8 +46,6 @@ const MealsList = () => {
     </div>
   );
 };
-
-export default MealsList;
 
 const todaysMeals = [
   { id: 1, name: 'Baked Beans', ticked: false },
@@ -76,4 +70,4 @@ const MealsProvider = ({ children }) => {
   return <MealsContext.Provider value={{ meals, tickMeal }}>{children}</MealsContext.Provider>;
 };
 
-export default MealsProvider;
+export default App;
